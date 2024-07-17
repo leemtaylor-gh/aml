@@ -24,7 +24,7 @@ az group create --name $RESOURCE_GROUP --location $RANDOM_REGION
 az configure --defaults group=$RESOURCE_GROUP
 
 echo "Create an Azure Machine Learning workspace:"
-az ml workspace create --name $WORKSPACE_NAME 
+az ml workspace create -n $WORKSPACE_NAME -g $RESOURCE_GROUP
 az configure --defaults workspace=$WORKSPACE_NAME 
 
 # Create compute instance
